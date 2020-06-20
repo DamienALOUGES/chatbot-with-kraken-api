@@ -1,0 +1,22 @@
+<%- include("_header") -%>
+
+<div>
+    <form action="/send" method="POST">
+          <% for (const row of model) { %>
+            <tr>
+              <td><%= row.question %></td><br>
+              <td><%= row.reponse %></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td>at : <%= row.timestamp %></td><br>
+              <p></p>
+              </td>
+            </tr>
+          <% } %>
+
+          <input name="usermsg" type="text" id="usermsg" size="80" />
+          <input name="submitmsg" type="submit"  id="submitmsg" value="Send" />
+          <input name="submitmsg" type="submit"  id="submitmsg" value="Send" style="display: none" />
+      </form>
+</div>
+
+<%- include("_footer") -%>
